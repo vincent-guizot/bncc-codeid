@@ -1,52 +1,19 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
-import Profile from "./components/Profile";
+import TableProfile from "./components/TableProfile";
 
 // React Component
 function App() {
-  const profiles = [
-    {
-      id: 1,
-      name: "Vincent",
-      hobby: "makan",
-    },
-    {
-      id: 2,
-      name: "Denny",
-      hobby: "climbing",
-    },
-    {
-      id: 3,
-      name: "Donny",
-      hobby: "motoran",
-    },
-    {
-      id: 4,
-      name: "tests",
-      hobby: "coding",
-    },
-    {
-      id: 5,
-      name: "Putri",
-      hobby: "jalan2",
-    },
-  ];
-
   // JSX => Syntactical Sugar utk HTML tp sebenarnya adalah bahasa JS
   return (
     <div className="App">
-      <h1>Belajar React.js</h1>
-      <hr />
+      <div className="container p-3 text-center bg-dark">
+        <h1 className="text-white">Front End Development with React.js</h1>
+      </div>
 
-      {
-        profiles.map(profile => {
-          const {id, name, hobby} = profile
-          return (
-            <Profile key={id} name={name} hobby={hobby}></Profile>
-          )
-        })
-      }
+      <TableProfile></TableProfile>
     </div>
   );
 }

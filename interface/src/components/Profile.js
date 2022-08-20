@@ -4,6 +4,7 @@ import React from 'react';
 function Profile(props) {
     // destructuring
     const {name, hobby} = props
+    console.log(props)
     return (
     <div>
         <h3>Hi, nama saya {name}</h3>
